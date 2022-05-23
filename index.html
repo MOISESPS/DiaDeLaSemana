@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula el día de la semana</title>
+    <style type="text/css">
+        h1{
+         background-color: #68ebe0;
+         color: #c03218;
+         text-align: center;
+        }
+        .res{
+         padding: 15px;
+         margin: 5px;
+         text-align: center;
+         color: #0f0e0e;
+         font-size: 24px;
+        }
+       </style>
+</head>
+<section>
+    <header>
+        <h1>
+            SCRIPT PARA ESCOGER UN DIA DE LA SEMANA
+        </h1>
+    </header>
+    <section class="res">
+        <div class="calculos" id="salida"></div>
+    <br><br><br>
+    <input type="text" id="D">
+    <button id="btn">Calcular</button>
+    <br><br><br>
+    <h2>Resultado:</h2>
+    <div id="resultado"></div>
+    <script>
+        var boton=document.getElementById('btn');
+        boton.addEventListener('click',diassem);
+        function  diassem()
+        {
+            var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+            var n=document.getElementById('D').value;
+            midia=n
+            midia--;
+            if(midia>=0 && midia<7)
+            {
+                r= dias[midia];
+            }
+                
+            else
+            {
+                r="No existe ese dia.";
+            }
+        document.getElementById("resultado").innerHTML ="<h3>El dia es "+r+"</h3>";       
+        }
+        
+           
+    </script>
+    </section>
+</body>
+</html>
